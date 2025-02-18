@@ -22,7 +22,7 @@ export default function HeroSection() {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
     }, 5000);
     return () => clearInterval(slideInterval);
-  }, []);
+  }, [slides.length]);
 
   // Info Cards Data
   const cards = [
@@ -52,7 +52,7 @@ export default function HeroSection() {
       setActiveCard((prev) => (prev + 1) % cards.length);
     }, 3000); // 3 seconds per card
     return () => clearInterval(cardInterval);
-  }, []);
+  }, [cards.length]);
 
   return (
     <section className="relative w-full min-h-screen flex flex-col">
