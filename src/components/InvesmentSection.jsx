@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import investment1 from "../assets/investment1.png";
 import investment2 from "../assets/investment2.png";
 import investment3 from "../assets/investment3.png";
@@ -38,9 +39,9 @@ const InvestmentSection = () => {
             <span className="text-blue-600">Invest</span> in Kadagam Ventures<span className="text-gray-900">.</span>
           </h2>
           <p className="text-gray-700 leading-relaxed text-sm sm:text-base text-justify">
-            <strong className="text-blue-700">Unlock the Future with Kadagam Ventures Pvt Ltd.</strong>  
+            <strong className="text-blue-700">Unlock the Future with Kadagam Ventures Private Limited.</strong>  
             <br /><br />
-            At Kadagam Ventures Pvt Ltd, we go beyond building businesses—we shape industries and create transformative opportunities.  
+            At Kadagam Ventures Private Limited, we go beyond building businesses—we shape industries and create transformative opportunities.  
             With a strong foundation in technology, innovation, and customer-centric solutions, we invite visionary investors to be part of our high-growth ventures.
           </p>
 
@@ -65,8 +66,18 @@ const InvestmentSection = () => {
 
           <p className="text-gray-900 font-semibold text-sm sm:text-base text-justify">
             Join us in shaping the future! <br />
-            Partner with Kadagam Ventures Pvt Ltd and be part of the next big success story.
+            Partner with Kadagam Ventures Private Limited and be part of the next big success story.
           </p>
+
+          {/* See More Button */}
+          <div className="pt-6 text-center md:text-left">
+            <Link 
+              to="/investment-details" 
+              className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg transition-colors duration-300 font-semibold text-sm sm:text-base"
+            >
+              See More Details
+            </Link>
+          </div>
         </div>
       </div>
     </div>

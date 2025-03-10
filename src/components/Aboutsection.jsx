@@ -1,5 +1,6 @@
 import aboutHand from "../assets/abouthand.png";
 
+
 const AboutSection = () => {
   return (
     <div className="relative z-10 px-6 py-12 md:px-20 lg:px-32 flex flex-col md:flex-row items-center bg-white mt-12">

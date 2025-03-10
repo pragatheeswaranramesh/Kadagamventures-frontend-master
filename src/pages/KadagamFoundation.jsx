@@ -12,7 +12,7 @@ const FeaturesSection = () => {
             Kadagam Foundation – Transforming <br className="hidden md:block" /> Lives with Care<span className="text-gray-800">.</span>
           </h2>
           <p className="text-gray-600 mt-4 text-sm sm:text-base text-justify">
-            At Kadagam Foundation, we are committed to transforming lives through education, food assistance, and community development. We provide education and essential learning resources to orphaned and underprivileged students, ensuring they have a brighter future.
+            At Kadagam Foundation, we are committed to transforming lives through education, food assistance, and community development. We provide education and essential learning resources to orphaned and underprivileged students, ensuring they have a brighter future. Kadagam Foundation is the CSR (Corporate Social Responsibility) initiative of Kadagam Group, dedicated to social welfare activities. It focuses on establishing a Goshala for old-age cows, supporting education, and future projects like a school or an old-age home.
           </p>
         </div>
 

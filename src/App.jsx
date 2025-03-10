@@ -3,6 +3,7 @@ import "./styles.css";
 import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer.jsx";
 import Home from "./pages/Home.jsx";
+import InvestmentDetailsPage from "./components/InvesmentDetailpage.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
 import ContactUs from "./pages/ContactUs.jsx";
 import NithyaEvent from "./pages/NithyaEvent.jsx";
@@ -16,6 +17,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/investment-details" element={<InvestmentDetailsPage />} />
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/contactus" element={<ContactUs />} />
         <Route path="/NithyaEvent" element={<NithyaEvent />} />

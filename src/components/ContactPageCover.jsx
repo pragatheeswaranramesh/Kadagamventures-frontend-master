@@ -7,7 +7,7 @@ export default function ContactSection() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
             Lets Collaborate
           </h2>
-          <h2 className="text-lg text-gray-900">
+          <h2 className="text-lg text-gray-900 px-1.5">
             Create something impactful together! Reach out to Kadagam Ventures today.
           </h2>
         </div>
@@ -17,7 +17,7 @@ export default function ContactSection() {
           {/* Google Map Iframe */}
           <div className="w-full h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px]">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30773064.05684503!2d61.04182762828652!3d19.69228278198373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x640c6f27eb64873f%3A0xec0f2b7e569bda7d!2sKadagam%20Foundation!5e0!3m2!1sen!2sin!4v1739864393934!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.7656426499357!2d77.5990168!3d12.986835899999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17005b0a5e31%3A0xb6796593445e2823!2sKadagam%20Ventures!5e0!3m2!1sen!2sin!4v1739970581099!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0 }}

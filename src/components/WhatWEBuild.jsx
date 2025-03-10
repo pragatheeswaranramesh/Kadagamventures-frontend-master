@@ -6,29 +6,75 @@ import ticketsIcon from "../assets/Frame 30.png";
 import kadagamIcon from "../assets/Frame 29.png";
 
 import PropTypes from "prop-types";
+import { motion } from "framer-motion";
 
-const FeatureCard = ({ icon, title, subtitle, description, highlight, imgSrc, reverse = false, imgSize = "w-full max-w-xs sm:max-w-md" }) => {
+// Define animation variants for each card/section
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { 
+    opacity: 1, 
+    y: 0,
+    transition: { duration: 0.8 }
+  },
+};
+
+// Optional: Container variants for staggering if desired
+const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const FeatureCard = ({
+  icon,
+  title,
+  subtitle,
+  description,
+  highlight,
+  imgSrc,
+  reverse = false,
+  imgSize = "w-full max-w-xs sm:max-w-md",
+}) => {
   return (
-    <div className={`flex flex-col md:flex-row ${reverse ? "md:flex-row-reverse" : ""} items-center gap-6 sm:gap-8`}>
+    <div
+      className={`flex flex-col md:flex-row ${
+        reverse ? "md:flex-row-reverse" : ""
+      } items-center gap-6 sm:gap-8`}
+    >
       {/* Text Content */}
       <div className="md:w-1/2 space-y-4 px-4 sm:px-6">
-        <p className="text-blue-500 font-semibold text-base sm:text-lg">{highlight}</p>
+        <p className="text-blue-500 font-semibold text-base sm:text-lg">
+          {highlight}
+        </p>
         <div className="flex items-center gap-3 sm:gap-4">
           <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
             {icon}
           </div>
           <div>
-            <p className="text-gray-900 font-semibold text-lg sm:text-xl">{title}</p>
+            <p className="text-gray-900 font-semibold text-lg sm:text-xl">
+              {title}
+            </p>
             <p className="text-gray-500 text-sm sm:text-md">{subtitle}</p>
           </div>
         </div>
-        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">{description.title}</h3>
-        <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">{description.text}</p>
+        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900">
+          {description.title}
+        </h3>
+        <p className="text-gray-600 text-sm sm:text-lg leading-relaxed">
+          {description.text}
+        </p>
       </div>
 
       {/* Image Content */}
       <div className="md:w-1/2 flex justify-center px-4 sm:px-6">
-        <img src={imgSrc} alt={title} className={`${imgSize}`} />
+        <img
+          src={imgSrc}
+          alt={title}
+          className={`${imgSize} transition-transform duration-300 ease-in-out hover:scale-105 active:scale-105`}
+        />
       </div>
     </div>
   );
@@ -50,16 +96,43 @@ FeatureCard.propTypes = {
 
 const WhatWeBuild = () => {
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-20 lg:px-32 text-left mt-12">
+    <motion.div
+      className="container mx-auto px-4 sm:px-6 md:px-20 lg:px-32 text-left mt-12"
+      variants={containerVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+    >
       {/* Title */}
-      <div className="text-center">
-        <h2 className="text-3xl sm:text-5xl font-bold text-gray-900">What We Build</h2>
-      </div>
+      <motion.div 
+         variants={cardVariants}
+         initial="hidden"
+         whileInView="visible"
+         viewport={{ once: true, amount: 0.3 }}
+      >
+        <div className="text-center">
+          <h2 className="text-3xl sm:text-5xl font-bold text-gray-900">
+            What We Build
+          </h2>
+        </div>
+      </motion.div>
 
       {/* Event Section */}
-      <section className="py-10 sm:py-16 text-justify">
+      <motion.section
+        className="py-10 sm:py-16 text-justify"
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <FeatureCard
-          icon={<img src={eventIcon} alt="Event Icon" className="w-12 sm:w-14" />}
+          icon={
+            <img
+              src={eventIcon}
+              alt="Event Icon"
+              className="w-12 sm:w-14"
+            />
+          }
           title="Event Made Simple Now"
           subtitle="Stop thinking, let's connect"
           highlight="Nithya Event"
@@ -69,12 +142,24 @@ const WhatWeBuild = () => {
           }}
           imgSrc={mobile}
         />
-      </section>
+      </motion.section>
 
       {/* Ticketing Section */}
-      <section className="py-10 sm:py-16 text-justify">
+      <motion.section
+        className="py-10 sm:py-16 text-justify"
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <FeatureCard
-          icon={<img src={ticketsIcon} alt="Tickets Icon" className="w-12 sm:w-14" />}
+          icon={
+            <img
+              src={ticketsIcon}
+              alt="Tickets Icon"
+              className="w-12 sm:w-14"
+            />
+          }
           title="Handle Ticketing Easily"
           subtitle="Nithya Ticket makes booking simple"
           highlight="Nithya Tickets"
@@ -85,12 +170,24 @@ const WhatWeBuild = () => {
           imgSrc={tab}
           reverse
         />
-      </section>
+      </motion.section>
 
       {/* Kadagam Foundation Section */}
-      <section className="py-10 sm:py-16 text-justify">
+      <motion.section
+        className="py-10 sm:py-16 text-justify"
+        variants={cardVariants}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+      >
         <FeatureCard
-          icon={<img src={kadagamIcon} alt="Kadagam Icon" className="w-12 sm:w-14" />}
+          icon={
+            <img
+              src={kadagamIcon}
+              alt="Kadagam Icon"
+              className="w-12 sm:w-14"
+            />
+          }
           title="We’re a Non-Profit & Charity Organization"
           subtitle="Kadagam Foundation supports communities"
           highlight="Kadagam Foundation"
@@ -100,8 +197,8 @@ const WhatWeBuild = () => {
           }}
           imgSrc={kadagam}
         />
-      </section>
-    </div>
+      </motion.section>
+    </motion.div>
   );
 };
 

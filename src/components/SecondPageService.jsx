@@ -15,8 +15,7 @@ export default function ServiceHeroSection() {
           Kadagam Ventures: More Than Just a Name
         </h1>
         <p className="mt-4 text-sm sm:text-lg md:text-xl max-w-[90%] sm:max-w-2xl mx-auto">
-          Offering free education to those in need, and protecting the sacred cow, 
-          we can contribute to a more harmonious world.
+        it’s a commitment to innovation, excellence, and transformative solutions that drive success across industries.
         </p>
       </div>
     </div>
